@@ -314,3 +314,50 @@ root.render(
 </Exp9>
 </div>
 );
+
+exp10
+Synchronous and Asynchronous
+const fs = require("fs");
+console.log("--- Synchronous Part ---");
+fs.writeFileSync("data.txt", "Hello this is sync file.");
+console.log("File created");
+const data = fs.readFileSync("data.txt", "utf8");
+console.log("Read Data:", data);
+fs.appendFileSync("data.txt", "\nAdding more content.");
+console.log("data updated");
+fs.unlinkSync("data.txt");
+console.log("file deleted");
+console.log("\n--- Asynchronous Part ---");
+fs.writeFile("data.txt", "Hello this is async file", (err) => {
+  if (err) throw err;
+  console.log("File created");
+  fs.readFile("data.txt", "utf8", (err, data) => {
+    if (err) throw err;
+    console.log("Read Data:", data);
+    fs.appendFile("data.txt", "\nAdding more content.", (err) => {
+      if (err) throw err;
+      console.log("data updated");
+      fs.unlink("data.txt", (err) => {
+        if (err) throw err;
+        console.log("file deleted");
+      });
+    });
+
+server.js
+const http = require('http');
+const fs = require('fs');
+const server = http.createServer((req, res) => {
+  const stream = fs.createReadStream('text1.txt');
+  stream.on('error', (err) => {
+    res.statusCode = 500;
+    res.end('Server Error: ' + err.message);
+  });
+  stream.pipe(res);
+});
+server.listen(8087, '127.0.0.1', () => {
+  console.log('Server running at http://127.0.0.1:8087/');
+});
+
+Test1.txt
+Hello! This is a test file being served by the Node.js server.
+
