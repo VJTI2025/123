@@ -30,6 +30,7 @@ console.log(a3());
 console.log(a4(4,5));
 </script>
 </html>
+
 Exp3
 With constructor
 <script>
@@ -90,6 +91,7 @@ Exp4 promise
 <html>
 <head>
 <title>
+
 Promise
 </title>
 </head>
@@ -112,6 +114,7 @@ console.log(error);
 });
 </script>
 </html>
+
 Exp 5 fetch
 <script>
 fetch("https://dummyjson.com/users")
@@ -360,4 +363,5 @@ server.listen(8087, '127.0.0.1', () => {
 
 Test1.txt
 Hello! This is a test file being served by the Node.js server.
+
 
