@@ -1,0 +1,119 @@
+Here’s your **Experiment 3: Shell Scripting Basics** neatly formatted with only the essential steps — perfect for your lab record 👇
+
+---
+
+# **Experiment 3: Introduction to Shell Scripting**
+
+---
+
+### **Objective:**
+
+To understand the basics of shell scripting and automate simple tasks using Bash scripts.
+
+---
+
+### **Tools Required:**
+
+* Linux terminal / AWS CloudShell
+* Text editor (`nano`, `vim`, or VS Code)
+
+---
+
+### **Theory (Short & Simple):**
+
+* **Shell scripting** is used to automate repetitive command-line tasks.
+* A **shell script** is a text file containing a series of commands that the shell can execute.
+* Common uses: backups, monitoring, automation, and system setup.
+* Every shell script starts with a **shebang (`#!/bin/bash`)** to specify the shell interpreter.
+
+---
+
+## **Examples:**
+
+---
+
+### **Example 1: Hello World Script**
+
+```bash
+# Create a new file
+nano hello.sh
+```
+
+**Write the script:**
+
+```bash
+#!/bin/bash
+echo "Hello, Welcome to Shell Scripting!"
+```
+
+**Save and exit:** `Ctrl + X`, then `Y`, then `Enter`
+**Make executable:**
+
+```bash
+chmod +x hello.sh
+```
+
+**Run:**
+
+```bash
+./hello.sh
+```
+
+---
+
+### **Example 2: Simple Calculator**
+
+```bash
+nano calculator.sh
+```
+
+**Add code:**
+
+```bash
+#!/bin/bash
+echo "Enter two numbers:"
+read a
+read b
+echo "Sum = $(($a + $b))"
+```
+
+**Make executable and run:**
+
+```bash
+chmod +x calculator.sh
+./calculator.sh
+```
+
+---
+
+### **Example 3: File Backup Script**
+
+```bash
+nano backup.sh
+```
+
+**Add code:**
+
+```bash
+#!/bin/bash
+cp myfile.txt myfile_backup.txt
+echo "Backup created!"
+```
+
+**Test the script:**
+
+```bash
+touch myfile.txt
+chmod +x backup.sh
+./backup.sh
+```
+
+---
+
+### **Result:**
+
+Successfully created and executed basic shell scripts for printing output, performing arithmetic, and creating file backups.
+
+---
+
+Would you like me to combine **Experiments 1–3** into a single formatted **PDF file (for college submission)**?
