@@ -1,134 +1,35 @@
-Get-Command git | Select-Object Source
-javac Test.java
-java Test
+Here’s a short **technical theory on Nmap** — concise and clear for reports or viva prep 👇
 
-#!/bin/bash
+---
 
-echo "Step 0: Check Docker Installation"
-docker version
-docker info
+### **Nmap – Network Mapper**
 
-echo
-echo "Step 1: Pull Python Image"
-docker pull python:3.9.18-slim-bullseye
+**Nmap (Network Mapper)** is an open-source network scanning and security auditing tool used to discover hosts, services, and vulnerabilities on a network. It helps administrators and penetration testers understand the network’s structure and detect potential security risks.
 
-echo
-echo "Step 2: List Docker Images"
-docker images
-docker images -q
-docker images -a
-docker image ls
+**Key Functions:**
 
-echo
-echo "Step 3: Run a Container (detached mode to show in docker ps)"
-docker run -d --name mypython python:3.9.18-slim-bullseye tail -f /dev/null
+* **Host Discovery:** Identifies active devices on a network using ICMP, ARP, or TCP/UDP probes.
+* **Port Scanning:** Determines open, closed, or filtered ports on a target system.
+* **Service & Version Detection:** Detects running services and their versions using probe responses.
+* **OS Detection:** Estimates the operating system based on packet behavior and response signatures.
+* **Scriptable Scanning (NSE):** Uses the **Nmap Scripting Engine (NSE)** to automate vulnerability detection and configuration audits.
 
-echo
-echo "Step 4: Check Running Containers"
-docker ps
+**Common Commands:**
 
-echo
-echo "Step 5: Check All Containers"
-docker ps -a
+* `nmap <target>` – Basic scan
+* `nmap -sS <target>` – Stealth SYN scan
+* `nmap -O <target>` – OS detection
+* `nmap -sV <target>` – Service version detection
+* `nmap -A <target>` – Aggressive scan (OS + version + scripts)
 
-echo
-echo "Step 6: Inspect Image and Container"
-docker inspect python:3.9.18-slim-bullseye
-docker inspect mypython
+**Use Cases:**
 
-echo
-echo "Step 7: Stop the Container"
-docker stop mypython
+* Network inventory and topology mapping
+* Security assessment and vulnerability scanning
+* Firewall and intrusion detection testing
 
-echo
-echo "Step 8: Verify Container Stopped"
-docker ps -a
+**Output Formats:** Nmap supports text, XML, and HTML output for easy analysis and reporting.
 
-echo
-echo "Step 9: Remove the Container"
-docker rm mypython
+---
 
-echo
-echo "Step 10: Remove the Image"
-docker rmi python:3.9.18-slim-bullseye
-
-echo
-echo "Docker Practical Exam Completed Successfully!"
-
-
-
-# ---------------------- GIT PRACTICAL 1 ----------------------
-
-# Create a new project folder
-mkdir GitDemo
-cd GitDemo
-
-# Initialize Git repository
-git init
-
-# Add a file
-echo "Hello from xyz" > demo.txt
-git status
-
-# Add file to staging area
-git add demo.txt
-
-# Commit the changes
-git commit -m "Initial commit by xyz"
-
-# Connect local repo with remote repository
-git remote add origin https://github.com/xyz/GitDemo.git
-
-# Push files to remote repository
-git branch -M main
-git push -u origin main
-
-
-
-# ---------------------- GIT PRACTICAL 2 ----------------------
-
-# Create and initialize repository
-mkdir GitBranchDemo
-cd GitBranchDemo
-git init
-
-# Add and commit files
-echo "Main branch file by xyz" > main.txt
-git add .
-git commit -m "Main branch initial commit by xyz"
-
-# Create a new branch
-git branch feature
-
-# Switch to the new branch
-git checkout feature
-
-# Add files in feature branch
-echo "Feature branch changes by xyz" > feature.txt
-git add .
-git commit -m "Added feature file by xyz"
-
-# Switch back to main branch
-git checkout main
-
-# Merge branch
-git merge feature
-
-
-
-# ---------------------- GIT PRACTICAL 3 ----------------------
-
-# Clone repository to local system
-git clone https://github.com/xyz/RemoteGitDemo.git
-cd RemoteGitDemo
-
-# Add new files
-echo "This is xyz's remote demo" > remote.txt
-git add .
-git commit -m "Added remote demo file by xyz"
-
-# Push changes to remote
-git push origin main
-
-# Pull latest updates
-git pull origin main
+Would you like me to make this version even **shorter (around 4–5 lines)** for a report summary section?
