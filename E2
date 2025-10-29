@@ -1,0 +1,93 @@
+Here’s a **clean, concise, and well-formatted version** of your **Git and GitHub experiment (Experiment 2)** — ready for your lab record 👇
+
+---
+
+# **Experiment 2: Introduction to Git and GitHub**
+
+---
+
+### **Objective:**
+
+* Learn basic Git commands.
+* Understand how to create and push code to GitHub.
+
+---
+
+### **Tools Required:**
+
+* Git installed on your system
+* GitHub account
+* Code editor (e.g., VS Code)
+
+---
+
+### **Theory:**
+
+1. **Git** is a distributed version control system.
+2. It tracks changes in files and maintains the project’s complete history.
+3. Multiple developers can work on the same project without overwriting each other’s work.
+4. **GitHub** is an online hosting platform built on Git.
+5. It provides **cloud storage** for Git repositories.
+6. GitHub includes collaboration features like **pull requests**, **issues**, and **version tracking**.
+7. Git works locally, while GitHub helps in **team collaboration and remote sharing**.
+8. Both **open-source** and **private** projects can be managed on GitHub.
+
+---
+
+### **Procedure:**
+
+#### **Step 1: Install Git**
+
+```bash
+winget install git.git
+```
+
+#### **Step 2: Initialize a Local Git Repository**
+
+```bash
+git init
+```
+
+#### **Step 3: Create a File**
+
+Create a new file (e.g., `hello.txt`) and add some text inside it.
+
+#### **Step 4: Stage the File**
+
+```bash
+git add .
+```
+
+#### **Step 5: Commit the File**
+
+```bash
+git commit -m "First commit"
+```
+
+#### **Step 6: Create a GitHub Repository**
+
+* Log in to **GitHub** → Click **New Repository**.
+* Name your repo and click **Create Repository**.
+* Copy the **HTTPS URL** of the repo.
+
+#### **Step 7: Link Local Repo to GitHub**
+
+```bash
+git remote add origin <your_repo_url>
+```
+
+#### **Step 8: Push Code to GitHub**
+
+```bash
+git push -u origin master
+```
+
+---
+
+### **Conclusion:**
+
+Git efficiently manages code versions locally, and GitHub extends it by providing cloud-based storage and collaboration tools for teamwork and version control.
+
+---
+
+Would you like me to format this (and Experiment 1) into a **single combined PDF** for submission (with your name and college details at the top)?
