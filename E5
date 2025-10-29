@@ -1,0 +1,95 @@
+Here’s your **Experiment 5: System Monitoring and Networking Commands in Linux** formatted neatly for your lab record 👇
+
+---
+
+# **Experiment 5: System Monitoring and Networking Commands in Linux**
+
+---
+
+### **Objective:**
+
+To learn and use basic system monitoring and network utility commands in Linux.
+
+---
+
+### **Tools Required:**
+
+* Linux terminal (Ubuntu / Amazon Linux / CloudShell)
+* Internet connection
+
+---
+
+### **Theory (Short & Simple):**
+
+* **System monitoring commands** help check CPU, memory, and process usage.
+* **Network commands** help analyze open ports, network connections, and routing tables.
+* These tools are essential for system administration, troubleshooting, and performance monitoring.
+
+---
+
+### **Procedure:**
+
+#### **1. Install htop (System Monitor)**
+
+```bash
+sudo apt update
+sudo apt install htop -y
+```
+
+**Run htop:**
+
+```bash
+htop
+```
+
+* Displays real-time system metrics like CPU, memory usage, and active processes.
+
+---
+
+#### **2. List All Open Ports**
+
+```bash
+netstat -tuln
+```
+
+* Shows all active **TCP/UDP** ports and listening addresses.
+
+---
+
+#### **3. Show Listening Services with Process IDs**
+
+```bash
+netstat -tulpn
+```
+
+* Displays which services or processes are using specific ports.
+
+---
+
+#### **4. Display All Active Network Connections**
+
+```bash
+netstat -ant
+```
+
+* Lists all **active TCP connections** and their states.
+
+---
+
+#### **5. View the System Routing Table**
+
+```bash
+netstat -r
+```
+
+* Shows the kernel’s **IP routing table** — useful for diagnosing network issues.
+
+---
+
+### **Result / Observation:**
+
+Successfully executed system monitoring and networking commands (`htop`, `netstat`) to observe CPU usage, open ports, and routing information in a Linux environment.
+
+---
+
+Would you like me to include **Experiments 1–5** in one **combined PDF** (formatted for college submission with your name and details)?
