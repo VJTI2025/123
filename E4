@@ -1,0 +1,106 @@
+Here’s your **Experiment 4: Introduction to Docker** neatly formatted and ready for your lab record 👇
+
+---
+
+# **Experiment 4: Introduction to Docker**
+
+---
+
+### **Objective:**
+
+To learn the basics of Docker, including installing Docker, pulling images, running containers, and hosting a simple web server.
+
+---
+
+### **Tools Required:**
+
+* Docker Desktop
+* Docker Hub account
+* Internet connection
+* Command-line terminal
+
+---
+
+### **Theory (Short & Simple):**
+
+* **Docker** is a containerization platform that allows developers to package applications with all dependencies into containers.
+* A **container** is a lightweight, isolated environment that runs applications consistently across different systems.
+* **Docker Images** are blueprints for creating containers.
+* **Docker Hub** is an online registry for sharing Docker images.
+
+---
+
+### **Procedure:**
+
+#### **Step 1: Install and Verify Docker**
+
+```bash
+winget install docker.dockerDesktop     # Install Docker
+docker --version                        # Verify installation
+```
+
+---
+
+#### **Step 2: Open Docker Desktop**
+
+* Launch Docker Desktop and **login or sign up** with your Docker Hub account.
+
+---
+
+#### **Step 3: Pull an Operating System Image**
+
+```bash
+docker pull ubuntu
+```
+
+---
+
+#### **Step 4: Run a Docker Container and Execute Commands**
+
+```bash
+docker run -it ubuntu
+ls
+pwd
+echo "Hello from Docker Container"
+exit
+```
+
+---
+
+#### **Step 5: List Downloaded Images**
+
+```bash
+docker images
+```
+
+---
+
+#### **Step 6: Run a Web Server Container (NGINX)**
+
+```bash
+docker run -d -p 8080:80 nginx
+```
+
+Then open your browser and visit:
+👉 **[http://localhost:8080](http://localhost:8080)**
+You should see the **NGINX welcome page**.
+
+---
+
+#### **Step 7: Stop and Remove the Container**
+
+```bash
+docker ps                  # List running containers
+docker stop <container_id> # Stop container
+docker rm <container_id>   # Remove container
+```
+
+---
+
+### **Result / Observation:**
+
+Successfully installed Docker, pulled Ubuntu and NGINX images, and launched containers. Verified Docker functionality by interacting with containers and hosting a simple web server.
+
+---
+
+Would you like me to make a **clean formatted PDF** combining **Experiments 1–4** with your name and college details for submission?
