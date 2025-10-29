@@ -1,0 +1,23 @@
+A: Python script
+
+1. Create myscript.py
+  nano myscript.py
+
+  from datetime import datetime
+
+  with open("log.txt","a")as f:
+      f.write(f"Script ran at: {datetime.now()}\n")
+
+2. run python3 myscript.py
+
+3. caheck log.txt for output
+
+   cat log.txt
+
+B:Cron Job
+1.Cron Job
+  crontab -e
+  *****/usr/bin/python3/full/path/myscript.py
+
+2. wait a few minute then check log .txt
+ cat log.txt
